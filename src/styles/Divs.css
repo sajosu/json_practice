@@ -1,0 +1,88 @@
+body {
+    font-size: 1.1em;
+    font-family: 'arial', sans-serif;
+}
+
+.flip-card {
+    display: inline-block;
+    background-color: transparent;
+    width: 320px;
+    height: 470px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 20px;
+    border-radius: 10px;
+       
+  }
+
+h3 {
+    color: #17737f;
+}
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #88888870;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: white;
+    color: black;
+    
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(59, 156, 114);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  #newFetch {
+    border: 1px solid #17737f;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #checks {
+    display: inline-block;
+  }
+
+  button {
+    background-color: #c93379;
+    border:2px solid #edb7d0;
+    color: white;
+    padding: 10px;
+    font-family: 'rockwell', cursive;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #ed7cb1;
+}

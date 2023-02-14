@@ -1,0 +1,29 @@
+#Header {
+    background-image: url("https://thumbs.dreamstime.com/b/vector-mint-green-geometric-mosaic-triangles-repeat-seamless-pattern-background-can-be-used-fabric-wallpaper-stationery-89402638.jpg");
+    height: 200px;
+    background-color: rgb(56, 153, 110);
+    width: 100%;
+    background-repeat: repeat-x;
+    text-align: center;
+    color: #17737f;
+    font-family: 'rockwell', cursive;
+}
+
+#headline {
+    background-color: #ffffff95;
+    border: 3px solid white;
+    width: 40%;
+    min-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+          
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'rockwell', cursive;
+    color: #17737f;
+    } 
+
+
