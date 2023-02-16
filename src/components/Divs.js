@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 //Define state variables & url for API
 
@@ -17,34 +17,34 @@ export default function Divs() {
   }
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   //Button & checkbox functions
   
   function FetchNewData() {
-    fetchData();
+    fetchData()
   }
 
   //Event handlers for checkboxes, cannot be mutually checked
 
   function handleCheckYearNew(event) {
-    const checked = event.target.checked;
+    const checked = event.target.checked
     if (checked) {
-      setNewModels(true);
-      setRetroModels(false);
+      setNewModels(true)
+      setRetroModels(false)
     } else {
-      setNewModels(false);
+      setNewModels(false)
     }
   }
   
   function handleCheckYearRetro(event) {
-    const checked = event.target.checked;
+    const checked = event.target.checked
     if (checked) {
-      setRetroModels(true);
-      setNewModels(false);
+      setRetroModels(true)
+      setNewModels(false)
     } else {
-      setRetroModels(false);
+      setRetroModels(false)
     }
   }
 
@@ -52,12 +52,12 @@ export default function Divs() {
 
   function checkYearNew(dateOfBirth) {
     const year = parseInt(dateOfBirth.substring(0, 4))
-    return year >= 1980;
+    return year >= 1980
   }
 
   function checkYearRetro(dateOfBirth) {
     const year = parseInt(dateOfBirth.substring(0, 4))
-    return year < 1980;
+    return year < 1980
   }
 
   
@@ -72,6 +72,8 @@ export default function Divs() {
         return true
       }
     })
+
+    //Render the data
 
   return (
     <>
