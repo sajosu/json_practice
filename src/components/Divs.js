@@ -11,10 +11,18 @@ export default function Divs() {
   //Fetch data from API
 
   async function fetchData() {
+    try{
     const response = await fetch(apiUrl)
+    if (response.ok) {
     const responseData = await response.json()
     setData(responseData)
+    } else {
+      console.log('Error retrieving data')
+    }
+  } catch (error) {
+    console.log(error)
   }
+}
 
   useEffect(() => {
     fetchData()
@@ -60,11 +68,10 @@ export default function Divs() {
     return year < 1980
   }
 
-  
+  //filtering data according to checked checkbox
+
   const filteredData = data.filter((robot) => {
-    if (newModels && retroModels) {
-      return checkYearNew(robot.date_of_birth) && checkYearRetro(robot.date_of_birth)
-      } else if (newModels) {
+      if (newModels) {
         return checkYearNew(robot.date_of_birth)
       } else if (retroModels) {
         return checkYearRetro(robot.date_of_birth)
@@ -73,7 +80,7 @@ export default function Divs() {
       }
     })
 
-    //Render the data
+  //Render the data
 
   return (
     <>
