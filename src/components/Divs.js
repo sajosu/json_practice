@@ -110,7 +110,7 @@ export default function Divs() {
               <p>Gender: {robot.gender}</p>
             </div>
             <div className="flip-card-back">
-              <h1>Additional info</h1>
+              <h2>Additional info</h2>
               <p>Date of birth: {robot.date_of_birth}</p>
               <p>Email: {robot.email}</p>
               <p>Key skill: {robot.employment.key_skill}</p>
